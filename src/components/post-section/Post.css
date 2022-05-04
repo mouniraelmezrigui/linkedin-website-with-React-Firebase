@@ -1,0 +1,104 @@
+.post {
+  background: white;
+  padding: 15px 26px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  height: fit-content;
+}
+
+.post__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.post__info {
+  margin-left: 10px;
+}
+.post__info > h2 {
+  font-size: 15px;
+  }
+
+.post__info > p {
+  font-size: 12px;
+  color: gray;
+}
+
+.post__body {
+  overflow-wrap: break-word;
+}
+
+.post__buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 450px) {
+  .post__info {
+    margin-left: 10px;
+  }
+  .post__info > h2 {
+    font-size: 12px;
+  }
+
+  .post__info > p {
+    font-size: 8px;
+    color: gray;
+  }
+}
+
+.effect-name:hover .post__info > h2{
+  text-decoration: underline;
+  color: red;
+  padding: 100px;
+}
+
+/*  */
+.li-post-opertions-first:hover ~ .div-emogy {
+  padding: 10px;
+  display: flex;
+  position: absolute;
+  top: -55px;
+  right: 0;
+  width: 180px;
+  height: 60px;
+  border-radius: 44%;
+  background-color: #fff;
+  animation: identifier .24s linear;
+}
+
+@keyframes identifier {
+  0% {
+    top: -50px;
+    opacity: .4;
+  }
+  100% {
+    top: -55px;
+    opacity: 1;
+  }
+}
+
+.translateY {
+  animation: translateY .6s linear;
+  animation-delay: .1s;
+}
+.translateY2 {
+  animation: translateY .6s linear;
+  animation-delay: .2s;
+}
+.translateY3 {
+  animation: translateY .6s linear;
+  animation-delay: .4s;
+}
+@keyframes translateY {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+.li-post-opertions {
+  @apply text-gray-600 hover:text-black w-1/4 flex py-2 transition-all duration-200 cursor-pointer hover:bg-gray-100 ml-1 justify-center rounded-md;
+}
